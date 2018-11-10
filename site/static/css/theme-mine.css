@@ -1,0 +1,124 @@
+
+/*
+let COLOR_ORANGE = UIColor(hex: 0xee6521)
+
+// let COLOR_GREY_DARK = UIColor(hex: 0x242A33)
+let COLOR_GREY_DARK = UIColor(hex: 0x10161d)
+
+let COLOR_STATUS_BAR = UIColor(hex: 0x41484F)
+let COLOR_GREY_LIGHT = UIColor(hex: 0xC1C1C1)
+let COLOR_ALMOST_WHITE = UIColor(hex: 0xF2F2F2)
+let COLOR_GREEN = UIColor(hex: 0x215E01)
+let COLOR_BLUE = UIColor(hex: 0x063068)
+let COLOR_RED = UIColor(hex: 0x8C232A)
+let COLOR_YELLOW = UIColor(hex: 0xFC9E4F)
+let COLOR_LIGHT_BLUE = UIColor(hex: 0x4A8EE4)
+let COLOR_MAP_POLYLINE_DARK = UIColor(hex: 0x000000)
+let COLOR_TEXT_BUTTON = UIColor(hex: 0xFFFFFF)
+let COLOR_TEXT_NORMAL = UIColor(hex: 0x303030)
+let COLOR_TEXT_WHITE = UIColor(hex: 0xFFFFFF)
+let COLOR_TEXT_LIGHT = UIColor(hex: 0x4F4F4F)
+*/
+
+:root{
+    /* Orange: ee6521 */
+    --MAIN-TEXT-color:#323232; /* Color of text by default */
+    --MAIN-TITLES-TEXT-color: #5e5e5e; /* Color of titles h2-h3-h4-h5 */
+    --MAIN-LINK-color:#ee6521; /* Color of links */
+    --MAIN-LINK-HOVER-color:#ee6521; /* Color of hovered links */
+    --MAIN-ANCHOR-color: #ee6521; /* color of anchors on titles */
+
+    --MENU-HEADER-BG-color:#10161d; /* Background color of menu header */
+    --MENU-HEADER-BORDER-color:#242A33; /*Color of menu header border */ 
+    
+    --MENU-SEARCH-BG-color:#242A33; /* Search field background color (by default borders + icons) */
+    --MENU-SEARCH-BOX-color: #242A33; /* Override search field border color */
+    --MENU-SEARCH-BOX-ICONS-color: #F2F2F2; /* Override search field icons color */
+
+    --MENU-SECTIONS-ACTIVE-BG-color:#1b211c; /* Background color of the active section and its childs */
+    --MENU-SECTIONS-BG-color:#222723; /* Background color of other sections */
+    --MENU-SECTIONS-LINK-color: #ccc; /* Color of links in menu */
+    --MENU-SECTIONS-LINK-HOVER-color: #ee6521;  /* Color of links in menu, when hovered */
+    --MENU-SECTION-ACTIVE-CATEGORY-color: #777; /* Color of active category text */
+    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #fff; /* Color of background for the active category (only) */
+
+    --MENU-VISITED-color: #ee6521; /* Color of 'page visited' icons in menu */
+    --MENU-SECTION-HR-color: #ee6521; /* Color of <hr> separator in menu */
+}
+
+body {
+    color: var(--MAIN-TEXT-color) !important;
+}
+
+textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, select[multiple=multiple]:focus {
+    border-color: none;
+    box-shadow: none;
+}
+
+h2, h3, h4, h5 {
+    color: var(--MAIN-TITLES-TEXT-color) !important;
+}
+
+a {
+    color: var(--MAIN-LINK-color);
+}
+
+.anchor {
+    color: var(--MAIN-ANCHOR-color);
+}
+
+a:hover {
+    color: var(--MAIN-LINK-HOVER-color);
+}
+
+#sidebar ul li.visited > a .read-icon {
+	color: var(--MENU-VISITED-color);
+}
+
+#body a.highlight:after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 0%;
+    -webkit-transition: width 0.5s ease;
+    -moz-transition: width 0.5s ease;
+    -ms-transition: width 0.5s ease;
+    transition: width 0.5s ease;
+    background-color: var(--MAIN-LINK-HOVER-color);
+}
+#sidebar {
+	background-color: var(--MENU-SECTIONS-BG-color);
+}
+#sidebar #header-wrapper {
+    background: var(--MENU-HEADER-BG-color);
+    color: var(--MENU-SEARCH-BOX-color);
+    border-color: var(--MENU-HEADER-BORDER-color);
+}
+#sidebar .searchbox {
+	border-color: var(--MENU-SEARCH-BOX-color);
+    background: var(--MENU-SEARCH-BG-color);
+}
+#sidebar ul.topics > li.parent, #sidebar ul.topics > li.active {
+    background: var(--MENU-SECTIONS-ACTIVE-BG-color);
+}
+#sidebar .searchbox * {
+    color: var(--MENU-SEARCH-BOX-ICONS-color);
+}
+
+#sidebar a {
+    color: var(--MENU-SECTIONS-LINK-color);
+}
+
+#sidebar a:hover {
+    color: var(--MENU-SECTIONS-LINK-HOVER-color);
+}
+
+#sidebar ul li.active > a {
+    background: var(--MENU-SECTION-ACTIVE-CATEGORY-BG-color);
+    color: var(--MENU-SECTION-ACTIVE-CATEGORY-color) !important;
+}
+
+#sidebar hr {
+    border-color: var(--MENU-SECTION-HR-color);
+}
+
