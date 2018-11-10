@@ -1,5 +1,8 @@
-site:
-  build:
-    context: .
-  ports:
-    - 1313:1313 
+version: "2"
+services:
+
+  site:
+    build:
+      context: '.'
+    ports:
+      - 1313:1313 
